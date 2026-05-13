@@ -29,7 +29,7 @@ router.register(r'votos', views.VotoViewSet, basename='votos')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('eleicoes_api/', include('router.urls')),
+    path('', include(router.urls)),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 ]
